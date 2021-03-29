@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  mongo-primary:
+    image: mongo:4.0
+    container_name: node-x
+    command: mongod --port 27017 --dbpath /data/db --replSet myCluster
+    volumes:
+      - ./data/node-x:/data/db
+      - ./local/mongo/init-cluster.js:/scripts/init-cluster.js
+    ports:
+      - 27017:27017
+
+  mongo-secondary-1:
+    image: mongo:4.0
+    container_name: node-a
+    command: mongod --port 27017 --dbpath /data/db --replSet myCluster
+    volumes:
+      - ./data/node-a:/data/db
+    ports:
+      - 27018:27017
+
+  mongo-secondary-2:
+    image: mongo:4.0
+    container_name: node-b
+    command: mongod --port 27017 --dbpath /data/db --replSet myCluster
+    volumes:
+      - ./data/node-b:/data/db
+    ports:
+      - 27019:27017
