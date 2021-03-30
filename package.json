@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "casual": "^1.6.2",
+    "env-cmd": "^10.1.0",
+    "mongoose": "^5.12.2",
+    "underscore": "^1.12.1"
+  },
+  "scripts": {
+    "initd": "env-cmd -f .env.sample node src/init.js",
+    "start": "env-cmd -f .env.sample node src/index.js"
+  }
+}
