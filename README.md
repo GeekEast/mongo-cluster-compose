@@ -3,10 +3,10 @@
 
 ### Set Replica Sync Delay
 ```javascript
-# local/mongo/init-cluster.js
-# ...
+// local/mongo/init-cluster.js
+// ...
 cfg.members[1].slaveDelay = 30; //seconds
-# ...
+// ...
 ```
 
 ### Replica Mode
