@@ -27,3 +27,8 @@ yarn index                  # query using secondary nodes
 ```
 
 <!-- I will add the sharded version in future -->
+
+
+### References
+- [Learn Docker](https://github.com/willitscale/learning-docker/tree/master/tutorial-12)
+- [Docker boilerplates](https://github.com/drginm/docker-boilerplates/tree/master/mongodb-replicaset)
